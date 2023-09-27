@@ -2,7 +2,7 @@ import { Schema, model, models } from 'mongoose';
 
 const UserSchema = new Schema({
     email: {
-        type: string,
+        type:string,
         unique: [true, 'Email already exists!'],
         required: [true, 'Email is required!'],
     },
