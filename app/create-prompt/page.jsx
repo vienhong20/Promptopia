@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
-import Form from ' @components/Form';
+import Form from '@components/Form';
 
 const CreatePrompt = () => {
     const [submitting, setSubmitting ] = useState(false);
@@ -16,9 +16,15 @@ const CreatePrompt = () => {
     const createPrompt = async (e) => {
 
     }
-    
+
   return (
-    <Form />
+    <Form 
+        type="Create"
+        post={post}
+        setPost={setPost}
+        submitting={submitting}
+        handleSubmit={createPrompt}
+    />
   )
 }
 
