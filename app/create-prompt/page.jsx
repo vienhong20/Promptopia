@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
 import Form from '@components/Form';
+import Router from 'next/router';
 
 const CreatePrompt = () => {
     const [submitting, setSubmitting ] = useState(false);
@@ -26,8 +27,15 @@ const CreatePrompt = () => {
                     tag: post.tag
                 })
             })
-            
-        } catch (err) {
+
+            if(response.ok) {
+                Router.push('/');
+            }
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setSubmitting(false);
+        }
     }
 
   return (
