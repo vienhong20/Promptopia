@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 
 import Profile from '@components/profile';
 
-const Profile = () => {
+const MyProfile = () => {
 
     const handleEdit = () => {
 
@@ -27,4 +27,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default MyProfile
