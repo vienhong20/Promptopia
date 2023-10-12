@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 import Form from '@components/Form';
 import Router from 'next/router';
@@ -17,6 +16,9 @@ const EditPrompt = () => {
         tag: '',
     });
 
+    useEffect(() => {
+
+    }, [promptId])
     const createPrompt = async (e) => {
         e.preventDefault();
         setSubmitting(true);
