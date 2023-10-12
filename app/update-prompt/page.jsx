@@ -30,6 +30,8 @@ const EditPrompt = () => {
 
         if(promptId) getPromptDetails()
     }, [promptId])
+
+
     const updatePrompt = async (e) => {
         e.preventDefault();
         setSubmitting(true);
@@ -46,7 +48,7 @@ const EditPrompt = () => {
             })
 
             if(response.ok) {
-                Router.push('/');
+                router.push('/');
             }
         } catch (error) {
             console.log(error);
